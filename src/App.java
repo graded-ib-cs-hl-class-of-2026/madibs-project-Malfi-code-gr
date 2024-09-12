@@ -33,9 +33,9 @@ public class App {
         String userName = (madlibs.nextLine());
         return (userName);
     }
-    
+
     // prints out the initial instructions for using the madlibs
-    public void printInstructions() {
+    public void printInstructions() { 
         System.out.println("> Welcome to your own personal madlibs creation.");
         System.out.println("> In order for us to create your story, you have to answer a few simple questions.");
         System.out.println("> These are not personal questions, and feel free to be as creative as possible, so long as the needs we ask for are met.");
@@ -63,37 +63,37 @@ public class App {
         if (choice == 1) {
             // collect inputs
             System.out.print("> Adjective:\n>> ");
-            String adj1 = (madlibs.nextLine());
+            String adj1 = (madlibs.nextLine().toLowerCase());
             
             System.out.print("> Animal:\n>> ");
-            String animal1 = (madlibs.nextLine());
+            String animal1 = (madlibs.nextLine().toLowerCase());
 
             System.out.print("> Verb ending in ing:\n>> ");
-            String verb_ing1 = (madlibs.nextLine());
+            String verb_ing1 = (madlibs.nextLine().toLowerCase());
 
             System.out.print("> Noun:\n>> ");
-            String noun1 = (madlibs.nextLine());
+            String noun1 = (madlibs.nextLine().toLowerCase());
 
             System.out.print("> Adjective:\n>> ");
-            String adj2 = (madlibs.nextLine());
+            String adj2 = (madlibs.nextLine().toLowerCase());
 
             System.out.print("> Verb:\n>> ");
-            String verb1 = (madlibs.nextLine());
+            String verb1 = (madlibs.nextLine().toLowerCase());
 
             System.out.print("> Past tense verb:\n>> ");
-            String ptverb1 = (madlibs.nextLine());
+            String ptverb1 = (madlibs.nextLine().toLowerCase());
 
             System.out.print("> Place:\n>> ");
-            String place = (madlibs.nextLine());
+            String place = (madlibs.nextLine().toLowerCase());
 
             System.out.print("> Adjective:\n>> ");
-            String adj3 = (madlibs.nextLine());
+            String adj3 = (madlibs.nextLine().toLowerCase());
 
             System.out.print("> Noun:\n>> ");
-            String noun2 = (madlibs.nextLine());
+            String noun2 = (madlibs.nextLine().toLowerCase());
 
             System.out.print("> Emotion:\n>> ");
-            String emotion1 = (madlibs.nextLine());
+            String emotion1 = (madlibs.nextLine().toLowerCase());
 
             // print out madlibs
             System.out.println("Today, I, " + userName + ", went to the zoo and saw a very " + adj1 + " " + animal1 + ".");
@@ -104,40 +104,40 @@ public class App {
         } else if (choice == 2) { // story 2
             // collect inputs
             System.out.print("> Adjective:\n>> ");
-            String adj1 = (madlibs.nextLine());
+            String adj1 = (madlibs.nextLine().toLowerCase());
 
             System.out.print("> Noun:\n>> ");
-            String noun1 = (madlibs.nextLine());
+            String noun1 = (madlibs.nextLine().toLowerCase());
             
             System.out.print("> Adjective:\n>> ");
-            String adj2 = (madlibs.nextLine());
+            String adj2 = (madlibs.nextLine().toLowerCase());
 
             System.out.print("> Verb:\n>> ");
-            String verb1 = (madlibs.nextLine());
+            String verb1 = (madlibs.nextLine().toLowerCase());
 
             System.out.print("> Animal:\n>> ");
-            String animal1 = (madlibs.nextLine());
+            String animal1 = (madlibs.nextLine().toLowerCase());
 
             System.out.print("> Verb:\n>> ");
-            String verb2 = (madlibs.nextLine());
+            String verb2 = (madlibs.nextLine().toLowerCase());
 
             System.out.print("> Verb:\n>> ");
-            String verb3 = (madlibs.nextLine());
+            String verb3 = (madlibs.nextLine().toLowerCase());
 
             System.out.print("> Place:\n>> ");
-            String place1 = (madlibs.nextLine());
+            String place1 = (madlibs.nextLine().toLowerCase());
 
             System.out.print("> Verb:\n>> ");
-            String verb4 = (madlibs.nextLine());
+            String verb4 = (madlibs.nextLine().toLowerCase());
 
             System.out.print("> Noun:\n>> ");
-            String noun2 = (madlibs.nextLine());
+            String noun2 = (madlibs.nextLine().toLowerCase());
 
             System.out.print("> Adjective:\n>> ");
-            String adj3 = (madlibs.nextLine());
+            String adj3 = (madlibs.nextLine().toLowerCase());
 
             System.out.print("> Noun:\n>> ");
-            String noun3 = (madlibs.nextLine());
+            String noun3 = (madlibs.nextLine().toLowerCase());
             
             // print out madlibs
             System.out.println("In a small, " + adj1 + " " + noun1 + " shop, I found a " + adj2 + " potion on a shelf.");
@@ -148,34 +148,34 @@ public class App {
         } else if (choice == 3) { // story 3
             // collect inputs
             System.out.print("> Adjective:\n>> ");
-            String adj1 = (madlibs.nextLine());
+            String adj1 = (madlibs.nextLine().toLowerCase());
 
             System.out.print("> Adjective:\n>> ");
-            String adj2 = (madlibs.nextLine());
+            String adj2 = (madlibs.nextLine().toLowerCase());
             
             System.out.print("> Adjective:\n>> ");
-            String adj3 = (madlibs.nextLine());
+            String adj3 = (madlibs.nextLine().toLowerCase());
             
             System.out.print("> Noun:\n>> ");
-            String noun1 = (madlibs.nextLine());
+            String noun1 = (madlibs.nextLine().toLowerCase());
             
             System.out.print("> Sound:\n>> ");
-            String sound1 = (madlibs.nextLine());
+            String sound1 = (madlibs.nextLine().toLowerCase());
             
             System.out.print("> Noun:\n>> ");
-            String noun2 = (madlibs.nextLine());
+            String noun2 = (madlibs.nextLine().toLowerCase());
             
             System.out.print("> Noun:\n>> ");
-            String noun3 = (madlibs.nextLine());
+            String noun3 = (madlibs.nextLine().toLowerCase());
             
             System.out.print("> Verb:\n>> ");
-            String verb1 = (madlibs.nextLine());
+            String verb1 = (madlibs.nextLine().toLowerCase());
             
             System.out.print("> Past tense verb:\n>> ");
-            String ptverb1 = (madlibs.nextLine());
+            String ptverb1 = (madlibs.nextLine().toLowerCase());
             
             System.out.print("> Adjective:\n>> ");
-            String adj4 = (madlibs.nextLine());
+            String adj4 = (madlibs.nextLine().toLowerCase());
             
             // print out madlibs
             System.out.println("One " + adj1 + " night, my friends and I decided to explore the " + adj2 + " house at the end of the street.");
