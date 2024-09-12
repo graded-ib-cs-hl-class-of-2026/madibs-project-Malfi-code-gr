@@ -1,9 +1,11 @@
 import java.util.Scanner;
+import java.util.HashSet;
 
 public class App {
     // Initialize scanner & variables
     Scanner madlibs = new Scanner(System.in);
     int choice;
+    HashSet<String> usedInputs = new HashSet<>();
     
     // runs the main program calling on other methods
     public void start() {
@@ -63,119 +65,119 @@ public class App {
         if (choice == 1) {
             // collect inputs
             System.out.print("> Adjective:\n>> ");
-            String adj1 = (madlibs.nextLine().toLowerCase());
+            String adj1 = getValidInput();
             
             System.out.print("> Animal:\n>> ");
-            String animal1 = (madlibs.nextLine().toLowerCase());
+            String animal1 = getValidInput();
 
             System.out.print("> Verb ending in ing:\n>> ");
-            String verb_ing1 = (madlibs.nextLine().toLowerCase());
+            String verb_ing1 = getValidInput();
 
             System.out.print("> Noun:\n>> ");
-            String noun1 = (madlibs.nextLine().toLowerCase());
+            String noun1 = getValidInput();
 
             System.out.print("> Adjective:\n>> ");
-            String adj2 = (madlibs.nextLine().toLowerCase());
+            String adj2 = getValidInput();
 
             System.out.print("> Verb:\n>> ");
-            String verb1 = (madlibs.nextLine().toLowerCase());
+            String verb1 = getValidInput();
 
             System.out.print("> Past tense verb:\n>> ");
-            String ptverb1 = (madlibs.nextLine().toLowerCase());
+            String ptverb1 = getValidInput();
 
             System.out.print("> Place:\n>> ");
-            String place = (madlibs.nextLine().toLowerCase());
+            String place = getValidInput();
 
             System.out.print("> Adjective:\n>> ");
-            String adj3 = (madlibs.nextLine().toLowerCase());
+            String adj3 = getValidInput();
 
             System.out.print("> Noun:\n>> ");
-            String noun2 = (madlibs.nextLine().toLowerCase());
+            String noun2 = getValidInput();
 
             System.out.print("> Emotion:\n>> ");
-            String emotion1 = (madlibs.nextLine().toLowerCase());
+            String emotion1 = getValidInput();
 
             // print out madlibs
             System.out.println("Today, I, " + userName + ", went to the zoo and saw a very " + adj1 + " " + animal1 + ".");
             System.out.println("It was " + verb_ing1 + " near the " + noun1 + " and looked really " + adj2 + ".");
-            System.out.println("I decided to " + verb1 + " closer, but then it " + ptverb1 + " and ran towards the " + place + ".");
+            System.out.println("I decided to " + verb1 + " closer, but then it " + ptverb1 + " towards (the) " + place + ".");
             System.out.println("It was so " + adj3 + "! After that, I bought a " + noun2 + " and left feeling " + emotion1);
             System.out.println("==============");
         } else if (choice == 2) { // story 2
             // collect inputs
             System.out.print("> Adjective:\n>> ");
-            String adj1 = (madlibs.nextLine().toLowerCase());
+            String adj1 = getValidInput();
 
             System.out.print("> Noun:\n>> ");
-            String noun1 = (madlibs.nextLine().toLowerCase());
+            String noun1 = getValidInput();
             
             System.out.print("> Adjective:\n>> ");
-            String adj2 = (madlibs.nextLine().toLowerCase());
+            String adj2 = getValidInput();
 
             System.out.print("> Verb:\n>> ");
-            String verb1 = (madlibs.nextLine().toLowerCase());
+            String verb1 = getValidInput();
 
             System.out.print("> Animal:\n>> ");
-            String animal1 = (madlibs.nextLine().toLowerCase());
+            String animal1 = getValidInput();
 
             System.out.print("> Verb:\n>> ");
-            String verb2 = (madlibs.nextLine().toLowerCase());
+            String verb2 = getValidInput();
 
             System.out.print("> Verb:\n>> ");
-            String verb3 = (madlibs.nextLine().toLowerCase());
+            String verb3 = getValidInput();
 
             System.out.print("> Place:\n>> ");
-            String place1 = (madlibs.nextLine().toLowerCase());
+            String place1 = getValidInput();
 
             System.out.print("> Verb:\n>> ");
-            String verb4 = (madlibs.nextLine().toLowerCase());
+            String verb4 = getValidInput();
 
             System.out.print("> Noun:\n>> ");
-            String noun2 = (madlibs.nextLine().toLowerCase());
+            String noun2 = getValidInput();
 
             System.out.print("> Adjective:\n>> ");
-            String adj3 = (madlibs.nextLine().toLowerCase());
+            String adj3 = getValidInput();
 
             System.out.print("> Noun:\n>> ");
-            String noun3 = (madlibs.nextLine().toLowerCase());
+            String noun3 = getValidInput();
             
             // print out madlibs
             System.out.println("In a small, " + adj1 + " " + noun1 + " shop, I found a " + adj2 + " potion on a shelf.");
             System.out.println("The label said it could make you " + verb1 + " like a " + animal1 + ". I decided to " + verb2 + " it.");
-            System.out.println("Immediately, I started to " + verb3 + " all over the " + place1 + ", and suddenly, I could " + verb4 + ".");
+            System.out.println("Immediately, I started to " + verb3 + " all over (the) " + place1 + ", and suddenly, I could " + verb4 + ".");
             System.out.println("I kept going until I accidentally knocked over a " + noun2 + ".");
             System.out.println("I'll never forget that " + adj3 + " day. The day I became " + noun3 + ".");
         } else if (choice == 3) { // story 3
             // collect inputs
             System.out.print("> Adjective:\n>> ");
-            String adj1 = (madlibs.nextLine().toLowerCase());
+            String adj1 = getValidInput();
 
             System.out.print("> Adjective:\n>> ");
-            String adj2 = (madlibs.nextLine().toLowerCase());
+            String adj2 = getValidInput();
             
             System.out.print("> Adjective:\n>> ");
-            String adj3 = (madlibs.nextLine().toLowerCase());
+            String adj3 = getValidInput();
             
             System.out.print("> Noun:\n>> ");
-            String noun1 = (madlibs.nextLine().toLowerCase());
+            String noun1 = getValidInput();
             
             System.out.print("> Sound:\n>> ");
-            String sound1 = (madlibs.nextLine().toLowerCase());
+            String sound1 = getValidInput();
             
             System.out.print("> Noun:\n>> ");
-            String noun2 = (madlibs.nextLine().toLowerCase());
+            String noun2 = getValidInput();
             
             System.out.print("> Noun:\n>> ");
-            String noun3 = (madlibs.nextLine().toLowerCase());
+            String noun3 = getValidInput();
             
             System.out.print("> Verb:\n>> ");
-            String verb1 = (madlibs.nextLine().toLowerCase());
+            String verb1 = getValidInput();
             
             System.out.print("> Past tense verb:\n>> ");
-            String ptverb1 = (madlibs.nextLine().toLowerCase());
+            String ptverb1 = getValidInput();
             
             System.out.print("> Adjective:\n>> ");
-            String adj4 = (madlibs.nextLine().toLowerCase());
+            String adj4 = getValidInput();
             
             // print out madlibs
             System.out.println("One " + adj1 + " night, my friends and I decided to explore the " + adj2 + " house at the end of the street.");
@@ -186,6 +188,19 @@ public class App {
             System.out.println("We decided to " + verb1 + " to try to stop it, but it just " + ptverb1 + ".");
             System.out.println("It was so " + adj4 + ".");
         }
+    }
+
+    public String getValidInput() {
+        String input;
+        do {
+            input = madlibs.nextLine().trim().toLowerCase();
+            if (input.isEmpty()) {
+                System.out.print("Input cannot be empty, please try again:\n>> ");
+            }
+        } while (input.isEmpty());
+        
+        usedInputs.add(input); // Add valid input to the set
+        return input;
     }
   
 
