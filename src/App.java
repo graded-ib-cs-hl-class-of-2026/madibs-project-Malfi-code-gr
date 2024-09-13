@@ -8,10 +8,10 @@ public class App {
 
     // initialize color variables
 
-    String green = "\u001B[32m";
-    String red = "\u001B[31m";
-    String blue = "\u001B[34m";
-    String white = "\u001B[37m";
+    String g = "\u001B[32m";
+    String r = "\u001B[31m";
+    String b = "\u001B[34m";
+    String w = "\u001B[37m";
     // https://www.geeksforgeeks.org/how-to-add-colors-to-javascript-console-outputs/
     // https://codehs.com/tutorial/ryan/add-color-with-ansi-in-javascript
     
@@ -24,23 +24,31 @@ public class App {
         String playAgain;
         do {
             doMadlib(userName);
-            System.out.print("Would you like to play again? [Y] / [N]\n>>  ");
+            System.out.print("Would you like to play again? [Y] / [N]\n"+w+">>  ");
             playAgain = madlibs.nextLine().toUpperCase();
         } while (playAgain.equals("Y")); // while loop to keep playing
 
-        System.out.println("Thanks for playing!");
+        System.out.println(g+"Thanks for playing!");
+        System.out.println(b+"  ____                 _ _                _ ");
+        System.out.println(" / ___| ___   ___   __| | |__  _   _  ___| |");
+        System.out.println("| |  _ / _ \\ / _ \\ / _` | '_ \\| | | |/ _ \\ |");
+        System.out.println("| |_| | (_) | (_) | (_| | |_) | |_| |  __/_|");
+        System.out.println(" \\____|\\___/ \\___/ \\__,_|_.__/ \\__, |\\___(_)");
+        System.out.println("                               |___/       ");
+        // https://www.asciiart.eu/text-to-ascii-art
         madlibs.close();
     }
     
     // responsible for assigning a string value to userName
     public String getUserName() {
-        System.out.println(blue + "__        __   _                          _ ");
-        System.out.println(blue + "\\ \\      / /__| | ___ ___  _ __ ___   ___| |");
-        System.out.println(blue + " \\ \\ /\\ / / _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\ |");
-        System.out.println(blue + "  \\ V  V /  __/ | (_| (_) | | | | | |  __/_|");
-        System.out.println(blue + "   \\_/\\_/ \\___|_|\\___\\___/|_| |_| |_|\\___(_)");
-        System.out.print(green + "What is your name?\n>>  ");
-        String userName = (madlibs.nextLine());
+        System.out.println(b + "__        __   _                          _ ");
+        System.out.println(b + "\\ \\      / /__| | ___ ___  _ __ ___   ___| |");
+        System.out.println(b + " \\ \\ /\\ / / _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\ |");
+        System.out.println(b + "  \\ V  V /  __/ | (_| (_) | | | | | |  __/_|");
+        System.out.println(b + "   \\_/\\_/ \\___|_|\\___\\___/|_| |_| |_|\\___(_)");
+        // https://www.asciiart.eu/text-to-ascii-art
+        System.out.print(g + "What is your name?\n"+w+">>  ");
+        String userName = getValidInput();
         return (userName);
     }
 
@@ -52,19 +60,19 @@ public class App {
         System.out.println("> A question might prompt you to give a 'Noun' or 'Verb ending in ing', in which case you would type in your answer and press 'ENTER'.");
         System.out.println("Please do not include any extra spaces or characters.");
         System.out.println("> Have fun, and feel free to repeat as many times as you want!");
-        System.out.println(red + "==================");
+        System.out.println(r + "==================");
     }
 
     // prints out personalized greeting with userName as a parameter
     public void printGreeting(String userName) {
-        System.out.println(red + "=================");
-        System.out.println(green + "> Hello " + userName + "!");
+        System.out.println(r + "=================");
+        System.out.println(g + "> Hello " + userName + "!");
     }
     
     // doMadLib() is responsible for fetching all user inputs in relation to the madlib and for printing out the complete madlib
     public void doMadlib(String userName){
 
-        System.out.print(green + "Which story would you like to follow?:\n" + blue + "[1] --- [2] --- [3]\n" + white);
+        System.out.print(g + "Which story would you like to follow?:\n" + b + "[1] --- [2] --- [3]\n" + w);
         choice = madlibs.nextInt();
 
         madlibs.nextLine(); // prevent bugging from using .nextInt() before
@@ -72,45 +80,45 @@ public class App {
         // story 1
         if (choice == 1) {
             // collect inputs
-            System.out.print("> Adjective:\n>> ");
+            System.out.print(g+"> Adjective:\n"+w+">> ");
             String adj1 = getValidInput();
             
-            System.out.print("> Animal:\n>> ");
+            System.out.print(g+"> Animal:\n"+w+">> ");
             String animal1 = getValidInput();
 
-            System.out.print("> Verb ending in ing:\n>> ");
+            System.out.print(g+"> Verb ending in ing:\n"+w+">> ");
             String verb_ing1 = getValidInput();
 
-            System.out.print("> Noun:\n>> ");
+            System.out.print(g+"> Noun:\n"+w+">> ");
             String noun1 = getValidInput();
 
-            System.out.print("> Adjective:\n>> ");
+            System.out.print(g+"> Adjective:\n"+w+">> ");
             String adj2 = getValidInput();
 
-            System.out.print("> Verb:\n>> ");
+            System.out.print(g+"> Verb:\n"+w+">> ");
             String verb1 = getValidInput();
 
-            System.out.print("> Past tense verb:\n>> ");
+            System.out.print(g+"> Past tense verb:\n"+w+">> ");
             String ptverb1 = getValidInput();
 
-            System.out.print("> Place:\n>> ");
+            System.out.print(g+"> Place:\n"+w+">> ");
             String place = getValidInput();
 
-            System.out.print("> Adjective:\n>> ");
+            System.out.print(g+"> Adjective:\n"+w+">> ");
             String adj3 = getValidInput();
 
-            System.out.print("> Noun:\n>> ");
+            System.out.print(g+"> Noun:\n"+w+">> ");
             String noun2 = getValidInput();
 
-            System.out.print("> Emotion:\n>> ");
+            System.out.print(g+"> Emotion:\n"+w+">> ");
             String emotion1 = getValidInput();
 
             // print out madlibs
-            System.out.println("Today, I, " + userName + ", went to the zoo and saw a very " + adj1 + " " + animal1 + ".");
+            System.out.println(b+"Today, I, " + userName + ", went to the zoo and saw a very " + adj1 + " " + animal1 + ".");
             System.out.println("It was " + verb_ing1 + " near the " + noun1 + " and looked really " + adj2 + ".");
             System.out.println("I decided to " + verb1 + " closer, but then it " + ptverb1 + " towards (the) " + place + ".");
             System.out.println("It was so " + adj3 + "! After that, I bought a " + noun2 + " and left feeling " + emotion1);
-            System.out.println("==============");
+            System.out.println(r+"=============="+g);
         } else if (choice == 2) { // story 2
             // collect inputs
             System.out.print("> Adjective:\n>> ");
