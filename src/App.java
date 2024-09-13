@@ -55,12 +55,12 @@ public class App {
 
     // prints out the initial instructions for using the madlibs
     public void printInstructions() { 
-        System.out.println("Welcome to your own personal madlibs creation.");
-        System.out.println("In order for us to create your story, you have to answer a few simple questions.");
-        System.out.println("These are not personal questions, and feel free to be as creative as possible, so long as the needs we ask for are met.");
-        System.out.println("A question might prompt you to give a 'Noun' or 'Verb ending in ing', in which case you would type in your answer and press 'ENTER'.");
-        System.out.println("Please do not include any extra spaces or characters.");
-        System.out.println("Have fun, and feel free to repeat as many times as you want!");
+        System.out.println("| Welcome to your own personal madlibs creation.");
+        System.out.println("| In order for us to create your story, you have to answer a few simple questions.");
+        System.out.println("| These are not personal questions, and feel free to be as creative as possible, so long as the needs we ask for are met.");
+        System.out.println("| A question might prompt you to give a 'Noun' or 'Verb ending in ing', in which case you would type in your answer and press 'ENTER'.");
+        System.out.println("| Please do not include any extra spaces or characters.");
+        System.out.println("| Have fun, and feel free to repeat as many times as you want!");
         System.out.println(r + "==================");
     }
 
@@ -226,7 +226,7 @@ public class App {
   
     public void printGoodbye() {
         // same thing with this one (https://fsymbols.com/generators/carty/)
-        System.out.println(g+"Thanks for playing!");
+        System.out.println(g+"Thanks for playing!\n");
 
         System.out.println(b+"▌ ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔ ▐\n" +
                              "▌  ░██████╗░░█████╗░░█████╗░██████╗░██████╗░██╗░░░██╗███████╗██╗  ▐\n" +
@@ -234,8 +234,8 @@ public class App {
                              "▌  ██║░░██╗░██║░░██║██║░░██║██║░░██║██████╦╝░╚████╔╝░█████╗░░██║  ▐\n" +
                              "▌  ██║░░╚██╗██║░░██║██║░░██║██║░░██║██╔══██╗░░╚██╔╝░░██╔══╝░░╚═╝  ▐\n" +
                              "▌  ╚██████╔╝╚█████╔╝╚█████╔╝██████╔╝██████╦╝░░░██║░░░███████╗██╗  ▐\n" +
-                             "▌  ░╚═════╝░░╚════╝░░╚════╝░╚═════╝░╚═════╝░░░░╚═╝░░░╚══════╝╚═╝  ▐ +\n" +
-                             "▌ ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁ ▐\");");
+                             "▌  ░╚═════╝░░╚════╝░░╚════╝░╚═════╝░╚═════╝░░░░╚═╝░░░╚══════╝╚═╝  ▐\n" +
+                             "▌ ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁ ▐");
 
         
     }
