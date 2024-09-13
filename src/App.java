@@ -23,6 +23,7 @@ public class App {
         printInstructions();
         String playAgain;
 
+        // 27 - 31 learned from https://www.w3schools.com/java/java_while_loop_do.asp
         do {
             doMadlib(userName);
             System.out.print(g+"Would you like to play again? [Y] / [N]\n"+w+" ↳ ");
