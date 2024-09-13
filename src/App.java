@@ -36,12 +36,18 @@ public class App {
     
     // responsible for assigning a string value to userName
     public String getUserName() {
-        // same thing with this one (https://www.asciiart.eu/text-to-ascii-art)
-        System.out.println(b + "__        __   _                          _ ");
-        System.out.println(b + "\\ \\      / /__| | ___ ___  _ __ ___   ___| |");
-        System.out.println(b + " \\ \\ /\\ / / _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\ |");
-        System.out.println(b + "  \\ V  V /  __/ | (_| (_) | | | | | |  __/_|");
-        System.out.println(b + "   \\_/\\_/ \\___|_|\\___\\___/|_| |_| |_|\\___(_)");
+        // Text itself was copied from https://fsymbols.com/generators/carty/
+        // idea gotten from talking to Gabu
+        // border from https://www.w3schools.com/charsets/ref_utf_symbols.asp and manually formatted
+
+        System.out.println(b+"▌ ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔ ▐\n" +
+                             "▌  ░██╗░░░░░░░██╗███████╗██╗░░░░░░█████╗░░█████╗░███╗░░░███╗███████╗██╗  ▐\n" +
+                             "▌  ░██║░░██╗░░██║██╔════╝██║░░░░░██╔══██╗██╔══██╗████╗░████║██╔════╝██║  ▐\n" +
+                             "▌  ░╚██╗████╗██╔╝█████╗░░██║░░░░░██║░░╚═╝██║░░██║██╔████╔██║█████╗░░██║  ▐\n" +
+                             "▌  ░░████╔═████║░██╔══╝░░██║░░░░░██║░░██╗██║░░██║██║╚██╔╝██║██╔══╝░░╚═╝  ▐\n" +
+                             "▌  ░░╚██╔╝░╚██╔╝░███████╗███████╗╚█████╔╝╚█████╔╝██║░╚═╝░██║███████╗██╗  ▐\n" +
+                             "▌  ░░░╚═╝░░░╚═╝░░╚══════╝╚══════╝░╚════╝░░╚════╝░╚═╝░░░░░╚═╝╚══════╝╚═╝  ▐\n" +
+                             "▌ ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁ ▐");
         System.out.print(g + "What is your name?\n"+w+" ↳ ");
         String userName = madlibs.nextLine();
         return (userName);
@@ -219,16 +225,19 @@ public class App {
     }
   
     public void printGoodbye() {
-        // Text itself was copied from https://www.asciiart.eu/text-to-ascii-art
-        // and then I modified it to be able to be displayed "mostly just changing \ into \\"
-        // idea gotten from talking to Gabu
+        // same thing with this one (https://fsymbols.com/generators/carty/)
         System.out.println(g+"Thanks for playing!");
-        System.out.println(b+"  ____                 _ _                _ ");
-        System.out.println(" / ___| ___   ___   __| | |__  _   _  ___| |");
-        System.out.println("| |  _ / _ \\ / _ \\ / _` | '_ \\| | | |/ _ \\ |");
-        System.out.println("| |_| | (_) | (_) | (_| | |_) | |_| |  __/_|");
-        System.out.println(" \\____|\\___/ \\___/ \\__,_|_.__/ \\__, |\\___(_)");
-        System.out.println("                               |___/       ");
+
+        System.out.println(b+"▌ ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔ ▐\n" +
+                             "▌  ░██████╗░░█████╗░░█████╗░██████╗░██████╗░██╗░░░██╗███████╗██╗  ▐\n" +
+                             "▌  ██╔════╝░██╔══██╗██╔══██╗██╔══██╗██╔══██╗╚██╗░██╔╝██╔════╝██║  ▐\n" +
+                             "▌  ██║░░██╗░██║░░██║██║░░██║██║░░██║██████╦╝░╚████╔╝░█████╗░░██║  ▐\n" +
+                             "▌  ██║░░╚██╗██║░░██║██║░░██║██║░░██║██╔══██╗░░╚██╔╝░░██╔══╝░░╚═╝  ▐\n" +
+                             "▌  ╚██████╔╝╚█████╔╝╚█████╔╝██████╔╝██████╦╝░░░██║░░░███████╗██╗  ▐\n" +
+                             "▌  ░╚═════╝░░╚════╝░░╚════╝░╚═════╝░╚═════╝░░░░╚═╝░░░╚══════╝╚═╝  ▐ +\n" +
+                             "▌ ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁ ▐\");");
+
+        
     }
 
     /* DO NOT TOUCH OR EDIT THE METHOD BELOW! ADD NO CODE BELOW THIS LINE */
