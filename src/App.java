@@ -1,11 +1,19 @@
 import java.util.Scanner;
-import java.util.HashSet;
 
 public class App {
+
     // Initialize scanner & variables
     Scanner madlibs = new Scanner(System.in);
     int choice;
-    HashSet<String> usedInputs = new HashSet<>();
+
+    // initialize color variables
+
+    String green = "\u001B[32m";
+    String red = "\u001B[31m";
+    String blue = "\u001B[34m";
+    String white = "\u001B[37m";
+    // https://www.geeksforgeeks.org/how-to-add-colors-to-javascript-console-outputs/
+    // https://codehs.com/tutorial/ryan/add-color-with-ansi-in-javascript
     
     // runs the main program calling on other methods
     public void start() {
@@ -26,12 +34,12 @@ public class App {
     
     // responsible for assigning a string value to userName
     public String getUserName() {
-        System.out.println("__        __   _                          _ ");
-        System.out.println("\\ \\      / /__| | ___ ___  _ __ ___   ___| |");
-        System.out.println(" \\ \\ /\\ / / _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\ |");
-        System.out.println("  \\ V  V /  __/ | (_| (_) | | | | | |  __/_|");
-        System.out.println("   \\_/\\_/ \\___|_|\\___\\___/|_| |_| |_|\\___(_)");
-        System.out.print("What is your name?\n>>  ");
+        System.out.println(blue + "__        __   _                          _ ");
+        System.out.println(blue + "\\ \\      / /__| | ___ ___  _ __ ___   ___| |");
+        System.out.println(blue + " \\ \\ /\\ / / _ \\ |/ __/ _ \\| '_ ` _ \\ / _ \\ |");
+        System.out.println(blue + "  \\ V  V /  __/ | (_| (_) | | | | | |  __/_|");
+        System.out.println(blue + "   \\_/\\_/ \\___|_|\\___\\___/|_| |_| |_|\\___(_)");
+        System.out.print(green + "What is your name?\n>>  ");
         String userName = (madlibs.nextLine());
         return (userName);
     }
@@ -44,19 +52,19 @@ public class App {
         System.out.println("> A question might prompt you to give a 'Noun' or 'Verb ending in ing', in which case you would type in your answer and press 'ENTER'.");
         System.out.println("Please do not include any extra spaces or characters.");
         System.out.println("> Have fun, and feel free to repeat as many times as you want!");
-        System.out.println("==================");
+        System.out.println(red + "==================");
     }
 
     // prints out personalized greeting with userName as a parameter
     public void printGreeting(String userName) {
-        System.out.println("=================");
-        System.out.println("> Hello " + userName + "!");
+        System.out.println(red + "=================");
+        System.out.println(green + "> Hello " + userName + "!");
     }
     
     // doMadLib() is responsible for fetching all user inputs in relation to the madlib and for printing out the complete madlib
     public void doMadlib(String userName){
 
-        System.out.print("Which story would you like to follow?:\n[1] --- [2] --- [3]\n");
+        System.out.print(green + "Which story would you like to follow?:\n" + blue + "[1] --- [2] --- [3]\n" + white);
         choice = madlibs.nextInt();
 
         madlibs.nextLine(); // prevent bugging from using .nextInt() before
@@ -190,6 +198,7 @@ public class App {
         }
     }
 
+    // function to take in user input and make sure it's not empty
     public String getValidInput() {
         String input;
         do {
@@ -199,7 +208,6 @@ public class App {
             }
         } while (input.isEmpty());
         
-        usedInputs.add(input); // Add valid input to the set
         return input;
     }
   
