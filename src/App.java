@@ -162,7 +162,7 @@ public class App {
             System.out.println("I'll never forget that " + adj3 + " day. The day I became (a/an)" + noun3 + ".");
             System.out.println(r+"==============");
         } else if (choice == 3) { // story 3
-            // collect inputs
+            // collect inputs (I thought about making a function like takeInput(adjective) but I couldn't figure out variable creation)
             System.out.print(g+"Adjective:\n"+w+" ↳ ");
             String adj1 = getValidInput();
 
