@@ -1,3 +1,5 @@
+// https://docs.oracle.com/javase/8/docs/api/java/util/InputMismatchException.html
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class App {
@@ -8,8 +10,9 @@ public class App {
 
     // initialize color variables
 
-    // 13-16 learned from https://www.geeksforgeeks.org/how-to-print-colored-text-in-java-console/
+    // 14-17 learned from https://www.geeksforgeeks.org/how-to-print-colored-text-in-java-console/
     // and https://codehs.com/tutorial/ryan/add-color-with-ansi-in-javascript
+    // colors used throughout the program
     String g = "\u001B[32m";
     String r = "\u001B[31m";
     String b = "\u001B[34m";
@@ -23,7 +26,7 @@ public class App {
         printInstructions();
         String playAgain;
 
-        // 27 - 31 learned from https://www.w3schools.com/java/java_while_loop_do.asp
+        // 28 - 32 learned from https://www.w3schools.com/java/java_while_loop_do.asp
         do {
             doMadlib(userName);
             System.out.print(g+"Would you like to play again? [Y] / [N]\n"+w+" ↳ ");
@@ -74,7 +77,23 @@ public class App {
     public void doMadlib(String userName){
 
         System.out.print(g + "Which story would you like to follow?:\n" + b + "[1] --- [2] --- [3]\n" + w);
-        choice = madlibs.nextInt();
+        int choice = 0;
+        boolean validChoice = false;
+
+        // Code somewhat copied from https://stackoverflow.com/questions/12702076/try-catch-with-inputmismatchexception-creates-infinite-loop
+        while (!validChoice) {
+            try {
+                choice = madlibs.nextInt(); 
+                if (choice <= 3 && choice >= 1) {
+                    validChoice = true;
+                } else {
+                    System.out.println("Invalid input. Please enter a number between 1 - 3.");
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter a number between 1 - 3.");
+                madlibs.next(); 
+            }
+        }        
 
         madlibs.nextLine(); 
         // prevent bugging from using .nextInt() previously 
@@ -165,7 +184,7 @@ public class App {
             System.out.println("The label said it could make you " + verb1 + " like a " + animal1 + ". I decided to " + verb2 + " it.");
             System.out.println("Immediately, I started to " + verb3 + " all over (the) " + place1 + ", and suddenly, I could " + verb4 + ".");
             System.out.println("I kept going until I accidentally knocked over a " + noun2 + ".");
-            System.out.println("I'll never forget that " + adj3 + " day. The day I became (a/an)" + noun3 + ".");
+            System.out.println("I'll never forget that " + adj3 + " day. The day I became (a/an) " + noun3 + ".");
             System.out.println(r+"==============");
         } else if (choice == 3) { // story 3
             // collect inputs (I thought about making a function like takeInput(adjective) but I couldn't figure out variable creation)
