@@ -8,8 +8,6 @@ public class App {
     Scanner madlibs = new Scanner(System.in);
     int choice;
 
-    // initialize color variables
-
     // 14-17 learned from https://www.geeksforgeeks.org/how-to-print-colored-text-in-java-console/
     // and https://codehs.com/tutorial/ryan/add-color-with-ansi-in-javascript
     // colors used throughout the program
