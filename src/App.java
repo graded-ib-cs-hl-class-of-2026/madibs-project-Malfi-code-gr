@@ -187,7 +187,7 @@ public class App {
             System.out.println("I'll never forget that " + adj3 + " day. The day I became (a/an) " + noun3 + ".");
             System.out.println(r+"==============");
         } else if (choice == 3) { // story 3
-            // collect inputs (I thought about making a function like takeInput(adjective) but I couldn't figure out variable creation)
+            // collect inputs (I thought about making a function like takeInput(adjective/verb) but I couldn't figure out variable creation
             System.out.print(g+"Adjective:\n"+w+" ↳ ");
             String adj1 = getValidInput();
 
@@ -236,7 +236,7 @@ public class App {
         do {
             input = madlibs.nextLine().trim().toLowerCase();
             if (input.isEmpty()) {
-                System.out.print("Input cannot be empty, please try again:\n ↳ ");
+                System.out.print(g+"Input cannot be empty, please try again:\n"+w+" ↳ ");
             }
         } while (input.isEmpty());
         
